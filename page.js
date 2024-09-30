@@ -1,19 +1,26 @@
-
-//logo fade
-const banner= document.getElementById('banner');
-const brand=document.getElementById('brand');
-const observes = new IntersectionObserver((entries)=>{
-  entries.forEach(entry =>{
-    if(entry.isIntersecting){
-      brand.classList.add('hidden1')
-    }
-    else{
-      brand.classList.remove('hidden1')
-      
-    };
+//click selection
+function setActive(selectedItem) {
+  // Remove 'active' class from all items
+  const items = document.querySelectorAll('.nav-link');
+  items.forEach(item => {
+      item.classList.remove('active');
   });
+
+  // Add 'active' class to the selected item
+  selectedItem.classList.add('active');
+}
+//logo fade
+document.addEventListener('DOMContentLoaded', () => {
+  const imageContainer = document.querySelector('.navbar-brand');
+  
+  // Add visible class to start fade-in
+  
+  
+  // Set a timeout to hide the image after 3 seconds
+  setTimeout(() => {
+    imageContainer.classList.add('visible');
+  }, 1000); // 2000ms fade-in + 3000ms display
 });
-observes.observe(banner);
 //fade text
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry)=>{
