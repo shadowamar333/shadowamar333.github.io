@@ -27,6 +27,7 @@ body{
    
     
 }
+
 .video-bg{
   position: absolute;
   z-index:-1;
@@ -38,39 +39,50 @@ body{
  
 }
 #navbar{
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
-  height: 125px;
+  height: 80px;
 
 }
+
 .navbar-nav{
   margin-right: 100px;
-  padding-left: 100px;
-  margin-left: 150px;
   
+  
+  
+  
+}
+.navbar-brand{
+  opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.navbar-brand.visible{
+  opacity: 1;
 }
 #logo img{
   border-radius: 10px;
-  width: 200px;
-  margin-left: 50px;
-  max-height: 250px;
-
+  width: 150px; 
+}
+.logo-img{
+ padding-top: 50vh;
 }
 .margin-y{
   margin-left: 570px;
 }
 .nav-item .nav-link{
-  color: white;
+  color: rgb(189, 218, 30);
   margin-left: 10px;
-  font-weight: bold;
+  font-size: 15px;
   transition: 0.5s;
 }
 .nav-item .nav-link:hover{
-  background: #f7f5f2;
+
   border-radius: 5px;
   color: white;
 }
-
+.nav-item .nav-link.active{
+  color: white;
+}
 .box{
     height: 100vh;
 }
@@ -92,19 +104,14 @@ body{
   
 }
 .para{
-  font-size: 2rem;
+  font-size:20px;
   padding: 15px;
 }
 #about{
  
   padding-bottom: 15px;
 }
-.hidden1{
-  display: none;
-  transition:all 1s;
-  filter: blur(5px);
-  transform: translateY(-30px);
-}
+
 
 .hidden{
   opacity: 0;
@@ -114,6 +121,7 @@ body{
 
 }
 .show{
+  
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
@@ -143,14 +151,14 @@ body{
   animation: fadeIn 2s ease-in-out 3s forwards; /* 3s delay */
 }
 .fade-out{
-  animation: fadeOut 2s ease-in-out 3s forwards;
+  animation: fadeOut 2s ease-in-out 1s forwards;
 }
 @keyframes fadeIn {
   0% {
-      display: none;
+    opacity: 0;
   }
   100% {
-     display: flex;
+    opacity: 1;
   }
 }
 @keyframes fadeOut {
@@ -167,12 +175,13 @@ body{
   
 }
 .card-container {
+  padding-top: 50px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+ gap: 40px;
+ 
+height: fit-content;
   background-color: #000000;
 }
 
@@ -180,47 +189,26 @@ body{
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 10px;
-  width: calc(25% - 20px); /* 4 cards per row with space */
-  overflow: hidden;
+ 
+  height: 30vh;
   text-align: center;
   transition: transform 0.3s ease;
+  width: 40vw;
+  min-width: 300px;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ddd;
-}
 
-.card p {
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
+
+.peo{
+  font-size: 30px !important;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-20px);
 }
 
-/* Responsive design */
-@media (max-width: 1000px) {
-  .card {
-      width: calc(25% - 20px); /* 3 cards per row */
-  }
-}
 
-@media (max-width: 768px) {
-  .card {
-    width: calc(25% - 20px); /* 1 card per row on small screens */
-  }}
 
-@media (max-width: 500px) {
-  .card {
-    width: calc(25% - 20px); /* 1 card per row on small screens */
-  }
-}
 .sponser{
   background-color: #000000
 }
@@ -243,8 +231,7 @@ body{
 }
 
 html {
-  font-size: 62.5%;
-  font-family: "Montserrat", sans-serif;
+
   scroll-behavior: smooth;
 }
 
@@ -285,10 +272,6 @@ html {
   background: #f9f9f9;
 }
 
-body {
-  font-size: 1.6rem;
-  background: var(--bg);
-}
 
 .container {
   max-width: 124rem;
@@ -302,11 +285,7 @@ body {
   text-align: center;
 }
 
-.section-heading {
-  font-size: 3rem;
-  color: var(--primary);
-  padding: 2rem 0;
-}
+
 
 #tranding {
   padding: 4rem 0;
@@ -319,21 +298,29 @@ body {
   }
 
 }
-
+.heading{
+  font-size: 6rem;
+}
 #tranding .tranding-slider {
   height: 52rem;
   padding: 2rem 0;
   position: relative;
 }
-
+.cospan{
+  font-size:30px;
+}
 @media (max-width:500px) {
   #tranding .tranding-slider {
     height: 45rem;
   }
   .para{
     font-size: 15px;
-    padding: 5px;
+    padding: 1px;
   }
+  .cospan{
+    font-size: 15px;
+  }
+ 
   .time h2{
     font-size: 35px !important;
     text-align: center;
@@ -349,12 +336,24 @@ body {
   .timer h2{
     font-size: 15px;
   }
+  .peo{
+    font-size: 20px !important;
+  }
+ .heading{
+  font-size: 3rem;
+ }
+}
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .tranding-slide {
   width: 37rem;
   height: 42rem;
   position: relative;
+
 }
 
 @media (max-width:500px) {
@@ -368,11 +367,12 @@ body {
   }
 }
 
-.tranding-slide .tranding-slide-img img {
+.tranding-slide .tranding-slide-img {
   width: 37rem;
   height: 42rem;
   border-radius: 2rem;
   object-fit: cover;
+  clip-path: polygon(0% 0%, 100% 10%, 90% 100%, 30% 100%);
 }
 
 .tranding-slide .tranding-slide-content {
@@ -384,11 +384,11 @@ body {
 }
 
 .tranding-slide-content .food-name {
-  position: absolute;
-  top: 7rem;
   
+  top: -2rem;
+  font-size: 20px;
   color: var(--white);
-  text-align: center;
+  
 }
 
 .tranding-slide-content .tranding-slide-content-bottom {
@@ -480,9 +480,11 @@ body {
   font-size: 15px;
   padding: 10px;
   text-shadow: #ffffff;
+  color: #e5ff00;
 
 }
 .navbar{
+  color: #e5ff00;
   text-shadow: #ffffff;
   height: 80px;
 }
@@ -676,40 +678,44 @@ footer{
 }
 
 .promo-platform h1 {
-  font-size: 36px;
+ 
   margin-bottom: 20px;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  padding: 20px;
+ display: flex;
+ 
+ gap: 30px;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+ padding-top: 20px;
 }
 
 .grid-item {
-  background-color: white;
-  border-radius: 10px;
+  background-color: rgb(255, 233, 233);
+ 
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  text-align: center;
-  width: 100%;
-  max-width: 300px;
+ align-items:end;
+  width:40vw;
+  height: 15vh;
+  min-width: 400px;
+  display: flex;
+  padding-left: 60px;
 }
 
+.provent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .grid-item img {
   width: 100%;
   height: auto;
-  border-bottom: 2px solid #f1f1f1;
+ 
 }
 
-.grid-item p {
-  padding: 15px;
-  font-size: 18px;
-  color: #333;
-}
 
 
 
