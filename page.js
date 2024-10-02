@@ -9,18 +9,9 @@ function setActive(selectedItem) {
   // Add 'active' class to the selected item
   selectedItem.classList.add('active');
 }
-//logo fade
-document.addEventListener('DOMContentLoaded', () => {
-  const imageContainer = document.querySelector('.navbar-brand');
-  
-  // Add visible class to start fade-in
-  
-  
-  // Set a timeout to hide the image after 3 seconds
-  setTimeout(() => {
-    imageContainer.classList.add('visible');
-  }, 1000); // 2000ms fade-in + 3000ms display
-});
+// fade long
+
+
 //fade text
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry)=>{
@@ -97,5 +88,54 @@ function updateCountdown() {
 // Update the countdown every 10 milliseconds
 const countdownInterval = setInterval(updateCountdown, 10);
 
+//text backup
+const texts = [
+  "India's",
+  "First",
+  "Robotic",
+  "Integrated",
+  "Auto Expo"
+];
 
+// Reference to the text container element
+const textContainer = document.getElementById('words');
 
+// Array of styles corresponding to the texts
+const styles = [
+  'style1',
+  'style2',
+  'style3',
+  'style4',
+  'style5'
+];
+
+// Variable to track the current index of the text array
+let index = 0;
+
+// Function to update the text every second
+setInterval(() => {
+  // Update the text in the container
+  textContainer.textContent = texts[index];
+  
+  // Update the style based on the current index
+  textContainer.className = styles[index];
+  
+  // Move to the next text in the array, looping back to the start
+  index = (index + 1) % texts.length; // Loop back to 0 when reaching the end
+}, 750); // 750 milliseconds = 0.75 seconds
+
+// fade long
+const observer4 = new IntersectionObserver((entries) => {
+  entries.forEach((entry)=>{
+      console.log(entry)
+      if (entry.isIntersecting){
+          entry.target.classList.add('show');
+      }
+      else{
+        entry.target.classList.remove('show');
+    }
+  });
+});
+
+const hiddenElements4 = document.querySelectorAll('.hidden3');
+hiddenElements4.forEach((el) => observer4.observe(el));
