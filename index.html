@@ -23,14 +23,15 @@
   </div>
   
   <script>
-      document.getElementById('whatsappButton').addEventListener('click', function() {
-          // Replace '1234567890' with the actual phone number
-          var whatsappUrl = "http://wa.link/9dl308" ;
-          
-          // Redirect to WhatsApp
-          window.location.href = whatsappUrl;
-      });
-  </script>
+    document.getElementById('whatsappButton').addEventListener('click', function() {
+        // Replace '1234567890' with the actual phone number or link
+        var whatsappUrl = "https://superprofile.bio/e/_eQTbcV-";
+
+        // Open the link in a new tab
+        window.open(whatsappUrl, '_blank');
+    });
+</script>
+
     <!--Navigation-->
     <nav class="navbar navbar-expand-lg" id="navbar" style="position: fixed; z-index: 5; width: 100%;">
       <div class="container-fluid">
@@ -57,11 +58,12 @@
               <a class="nav-link" onclick="setActive(this)" href="#events">Events</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="setActive(this)" href="#sponsorship">Sponsorship</a>
+              <a class="nav-link" onclick="setActive(this)" href="#timeline">Timeline</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" onclick="setActive(this)" href="#tickets">Tickets</a>
+            <!-- <li class="nav-item">
+              <a class="nav-link" onclick="setActive(this)" href="#sponsors">Sponsors</a>
             </li>
+            -->
           </ul>
         </div>
       </div>
@@ -70,12 +72,13 @@
 
 <div class="clip" >
    
-  <video class="video-bg"  playsinline  autoplay loop muted style="   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent, transparent, rgba(0, 0, 0, 0.7));">
+  <video class="video-bg"  playsinline  autoplay loop muted style="  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent, transparent, rgba(0, 0, 0, 0.7));">
     <source  src="./images/tms2424.mp4" type="video/mp4" >
   </video>
-  <div class="gradient-overlay"></div>
-  <div class="logo-img hidden fade-out" >
-    <img id="banner" src="./images/purelogo.PNG"  width="500px" alt="">
+  <div class="gradient-overlay" style="z-index: -1;"></div>
+
+  <div class="logo-img " >
+    <h1><span  style="z-index: 24;" id="words"></span></h1>
    
   </div>
 </div>
@@ -89,23 +92,23 @@
       <div class="timer  hidden">
  <div class="time">
   <h2 id="days" >00</h2>
-  <small>Days</small>
+  <small class="para">Days</small>
  </div>
 
  <div class="time">
   <h2  class="ss"  id="hours" >00</h2>
-  <small>Hours</small>
+  <small class="para">Hours</small>
  </div>
 
  <div class="time">
   
   <h2 id="minutes" >00</h2>
-  <small>Minutes</small>
+  <small class="para">Minutes</small>
  </div>
 
  <div class="time">
   <h2 id="seconds" >00</h2>
-  <small>Seconds</small>
+  <small class="para">Seconds</small>
  </div>
 </div>
 
@@ -142,22 +145,22 @@
   <h1 id="pre-events" class="hidden heading" style=" display: flex;justify-content: center;color: rgb(255, 255, 255);">PRE-EVENTS</h1>
   <div class="provent">
   <div class="grid-container">
-      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.7) url(./images/cfd.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
+      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.4) url(./images/cfd.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
         <div ><h1 class="peo" style="color: white;">matlab workshop</h1></div>
       </div>
-      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.7) url(./images/cfd\ original.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
+      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.4) url(./images/cfd\ original.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
         <div ><h1 class="peo" style="color: white;">cfd workshop</h1></div>
       </div>
-      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.7) url(./images/printin3d.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
+      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.4) url(./images/printin3d.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
         <div ><h1  class="peo" style="color: white;">3d printing</h1></div>
       </div>
-      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.7) url(./images/evworshop.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
+      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.4) url(./images/evworshop.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
         <div ><h1 class="peo" style="color: white;">ev workshop</h1></div>
       </div>
-      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.7) url(./images/gameworshop.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
+      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.4) url(./images/gameworshop.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
         <div ><h1 class="peo" style="color: white;">game workshop</h1></div>
       </div>
-      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.7) url(./images/robowar.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
+      <div class="grid-item hidden" style="clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);background: rgba(0, 0, 0,0.4) url(./images/robowar.jpg);background-blend-mode: darken;background-size: cover;background-position: center;">
         <div ><h1 class="peo" style="color: white;">robo war</h1></div>
       </div>
      
@@ -167,9 +170,9 @@
 </section>
 
 <!--Events-->
-<section id="tranding">
+<section id="tranding" >
   <h1 id="events" class="hidden  heading" style=" display: flex;justify-content: center;color: white;">EVENTS</h1>
-  <div class="container event hidden">
+  <div class="container event hidden" style="background:  linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent,transparent,rgba(0,0,0,1)), url('./images/foroo.png');background-position: center; background-repeat: no-repeat;background-size: cover;">
     <div class="swiper tranding-slider">
       <div class="swiper-wrapper">
         <!-- Slide-start -->
@@ -267,43 +270,82 @@
 </section>
 <!--Timeline-->
 <div class="timeline" style="background:  linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent,transparent,rgba(0,0,0,1)), url('./images/corvettdarken.png');background-position: center; background-repeat: no-repeat;background-size: cover;">
-  <div><h1  class="hidden  heading" style=" display: flex;justify-content: center;color: white;">TIME LINE</h1></div>
-</div>
-<!--Preevent-->
-<!--Sponsership-->
-<div class="sponser">
-  <div><h1 id="sponsorship"  class="hidden  heading" style=" display: flex;justify-content: center;color: white;">Sponsorship</h1></div>
+  <div><h1  id="timeline" class="hidden  heading" style=" display: flex;justify-content: center;color: white;">TIME LINE</h1></div>
+  <div class="maino">
   
-  <div class="card-container">
-    <div class="card hidden ">
-        <img src="./images/logo.PNG" alt="Social Media">
-        <p>Social Media</p>
+    <div class="containerp">
+        <ul>
+            <li class="hidden3"  style=" background: rgba(0, 0, 0,0.5) url(./images/2005.png);background-blend-mode: darken;background-size: cover;background-position: center;">
+          
+                <p>stunt performance by national dirt bike champion jinan c.d</p>
+                
+                <span class="date"><h1 class="parat">#2005</h1></span>
+                <span class="circle"></span>
+            </li>
+            <li class="hidden3"  style=" background: rgba(0, 0, 0,0.5) url(./images/2008.png);background-blend-mode: darken;background-size: cover;background-position: center;">
+        
+                <p>"south india's best student organised motor show".inaugurated by narain karthikeyan</p>
+                
+                <span class="date"><h1 class="parat">#2008</h1></span>
+                <span class="circle"></span>
+            </li>
+            <li class="hidden3"   style=" background: rgba(0, 0, 0,0.5) url(./images/2013.png);background-blend-mode: darken;background-size: cover;background-position: center;">
+                
+                <p>a trio of ferrri 458 italia, audi r8 and maserati gran turismo as main attracions.</p>
+                
+                <span class="date"><h1 class="parat">#2013</h1></span>
+                <span class="circle"></span>
+            </li>
+            <li class="hidden3 dopd" style=" background: rgba(0, 0, 0,0.5) url(./images/2017.png);background-blend-mode: darken;background-size: cover;background-position: center;">
+                
+                <p>public exhibition of formula racecar.interaction with formula 4 racer mira erda who is the first indian women to enter euro jk series</p>
+                
+                <span class="date"><h1 class="parat">#2017</h1></span>
+                <span class="circle"></span>
+            </li>
+            <li class="hidden3"   style=" background: rgba(0, 0, 0,0.5) url(./images/2019.png);background-blend-mode: darken;background-size: cover;background-position: center;">
+              
+              <p>lamborghini huracan,chevrolet biscayne,bike and car rallies.interaction with various automobile influencers like arun smoki and venom</p>
+              
+              <span class="date"><h1 class="parat">#2019</h1></span>
+              <span class="circle"></span>
+          </li>
+          <li class="hidden3"  style=" background: rgba(0, 0, 0,0.5) url(./images/2022.png);background-blend-mode: darken;background-size: cover;background-position: center;">
+          
+            <p>first event after pandemic.rc expo,bike and car rallies.interaction like clutchless and octanegirl.</p>
+            
+            <span class="date"><h1 class="parat">#2022</h1></span>
+            <span class="circle"></span>
+        </li>
+        </ul>
     </div>
-    <div class="card hidden">
-        <img src="./images/logo.PNG" alt="Digital Marketing">
-        <p>Digital Marketing</p>
-    </div>
-    <div class="card hidden">
-        <img src="./images/logo.PNG" alt="Magazine & E-Magazine">
-        <p>Magazine & E-Magazine</p>
-    </div>
-    <div class="card hidden">
-        <img src="./images/logo.PNG" alt="Print Media">
-        <p>Print Media</p>
-    </div>
-    <div class="card hidden">
-        <img src="./images/logo.PNG" alt="Radio Advertising">
-        <p>Radio Advertising</p>
-    </div>
-    <div class="card hidden">
-        <img src="./images/logo.PNG" alt="Cinema Advertising">
-        <p>Cinema Advertising</p>
-    </div>
-    
 </div>
 
 </div>
-
+<!--sponser-->
+<!--
+<section>
+  <div class="sponsorship"style="background:  linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent,transparent,rgba(0,0,0,1)), url('./images/maclaren.png');background-position: center; background-repeat: no-repeat;background-size: cover;">
+    <div style="text-align: center; background-color: black;"><h1 class="heading hidden" style="color: white;">Sponsorship & partners</h1></div>
+    <div class="gotz">
+      <div class="spensors">
+        <div><h3 class="smolhe" style="color: white;">Sponsors</h3></div>
+        <div class="spoinser">
+        <div class="spos"> <h1 class="heading">SBI</h1></div>
+        <div class="spos"></div>
+        <div class="spos"></div>
+      </div>
+      </div>
+      <div class="partners">
+        <div><h3 class="smolhe" style="color: white;">partners</h3></div>
+        <div class="parse"></div>
+        <div class="parse"></div>
+        <div class="parse"></div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
 <!--Footer-->
 <footer>
 <div class="footer">
@@ -313,11 +355,10 @@
   <div><img style="padding-bottom: 20px;" src="./images/purelogo.PNG" width="150px" alt="">
     <h1 >Follow Us</h1>
     <ul class="social-icons">
-      <li><a href=""><i class="fab fa-facebook"></i></a></li>
-      <li><a href=""><i  class="fab fa-twitter"></i></a></li>
-      <li><a href=""><i  class="fab fa-instagram"></i></a></li>
-      <li><a href=""><i  class="fab fa-youtube"></i></a></li>
-      <li><a href=""><i  class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://www.facebook.com/thrissurmotorshow?mibextid=kFxxJD"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="https://www.instagram.com/thrissurmotorshow?igsh=MWhqMzF5YnFoY2xxMA=="><i  class="fab fa-instagram"></i></a></li>
+      <li><a href="https://youtube.com/@thrissurmotorshowofficial5049?si=5pYMl5Iq-vsJk33B"><i  class="fab fa-youtube"></i></a></li>
+      <li><a href="https://www.linkedin.com/company/thrissur-motor-show-2024/"><i  class="fab fa-linkedin"></i></a></li>
   
     </ul>
   </div>
@@ -326,9 +367,9 @@
 </div>
 <div class="contact footer-content">
   <div><h1 >Contact Us</h1>
-  <p class="para">demotms2024@gmail.com</p>
-  <p  class="para">+91 8590679409</p>
-  <p  class="para">Ramavarmapuram Engineering College P O, Thrissur, Kerala, 680009
+  <p class="paraf">demotms2024@gmail.com</p>
+  <p  class="paraf">+91 8590679409</p>
+  <p  class="paraf">Ramavarmapuram Engineering College P O, Thrissur, Kerala, 680009
   </p>
 </div>
 </div>
@@ -336,11 +377,11 @@
   <div>
   <h1>Quick Links</h1>
   <ul class="list">
-    <li><a  class="para" href="#">Home</a></li>
-    <li><a  class="para" href="about">About Us</a></li>
-    <li><a  class="para" href="pre-events">Pre-Events</a></li>
-    <li><a  class="para" href="events">Events</a></li>   
-    <li><a  class="para" href="sponsorship">Sponsership</a></li>
+    <li><a  class="paraf" href="#">Home</a></li>
+    <li><a  class="paraf" href="about">About Us</a></li>
+    <li><a  class="paraf" href="pre-events">Pre-Events</a></li>
+    <li><a  class="paraf" href="events">Events</a></li>   
+    <li><a  class="paraf" href="timeline">timeline</a></li>
   </ul>
 </div>
 </div>
