@@ -28,6 +28,20 @@ body{
    
     
 }
+@media (max-width: 768px){
+  html,
+  body{
+  width:100%;
+  overflow-x:hidden;
+  }
+}
+@media (max-width: 1440px){
+  html,
+  body{
+  width:100%;
+  overflow-x:hidden;
+  }
+}
 
 .video-bg{
   position: absolute;
@@ -98,7 +112,7 @@ body{
 }
 .quote{
  
-  padding-top: 1rem;
+
   text-align: center;
   color: white;
   
@@ -307,10 +321,12 @@ html {
   .timeline{
     min-height: fit-content;
   }
- 
+ .collage0{
+  height: fit-content;
+ }
   .time h2{
     
-    font-size: 55px !important;
+    font-size: 35px !important;
     text-align: center;
   }
   .wrapper{
@@ -331,22 +347,27 @@ html {
 .footer{
   gap: 20px;
 }
-  .footer-content{
-    max-height: 220px;
+.footer-content{
+    max-height: 250px;
+    padding-top: 40px;
   }
  .heading{
   font-size: 3rem;
  }
- span#words{
-  font-size: 5vh;
-  color: rgb(191, 223, 9);
+ .bookright{
+  opacity: 1;
+  position: relative;
+  transition: all 1s ease-in-out;
+  animation: fade-right 1s ease forwards;
+  animation-delay: 2s; /* Delays the animation for 3 seconds */
+ }
+
+#words{
+  color: yellow;
+  font-size: 45px !important;
   font-weight: bolder;
   transition: all 0.5s ease;
-}
-#words{
-  font-size: 60px !important;
-  font-weight: 100;
-  transition: all 0.5s ease;
+  white-space: nowrap;
 }
 }
 html {
@@ -361,7 +382,21 @@ html {
   position: relative;
 
 }
+.bookright{
+  opacity: 1;
 
+}
+
+@keyframes fade-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px); /* Moves the text 100px to the right */
+  }
+}
 
 @media (max-width:500px) {
   .tranding-slide {
@@ -381,8 +416,9 @@ html {
   object-fit: cover;
   clip-path: polygon(0% 0%, 100% 10%, 90% 100%, 30% 100%);
 }
-span#words{
-  font-size: 20vh;
+#words{
+  font-size: 130px;
+  white-space: nowrap;
   color: #c1c40b;
   font-weight: bolder;
   transition: all 0.5s ease;
@@ -736,12 +772,7 @@ border: 3px solid green;
   pointer-events: none; /* This ensures the gradient does not block video controls */
   border-radius: 15px;
 }
-@media (max-width:990px) {
-  .time  {
-    left: 30% !important;
-    transform: translateX(-30%) !important;
-  }
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -949,6 +980,9 @@ ul li p {
 }
 
 @media only screen and (max-width: 550px) {
+  .containerp ul li{
+    height: 200px;
+  }
 	.containerp{
 		width: 80%;
     min-height: fit-content;
@@ -960,7 +994,7 @@ ul li p {
 		left: -40px;
 	}
   ul li p {
-    font-size: 9px;
+    font-size:9px;
     color: #f0e7e7;
     line-height: 18px;
     margin: 6px 0 4px 0;
