@@ -139,3 +139,4 @@ const observer4 = new IntersectionObserver((entries) => {
 
 const hiddenElements4 = document.querySelectorAll('.hidden3');
 hiddenElements4.forEach((el) => observer4.observe(el));
+
