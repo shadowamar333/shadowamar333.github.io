@@ -1,10 +1,10 @@
 @font-face {
   font-family: turbohead;
-  src: url(./turbohead.otf);
+  src: url(./moment.otf);
 }
 @font-face {
   font-family: turbotext;
-  src: url(./turbotext.ttf);
+  src: url(./monument\ regulr.otf);
 }
 body{
    overflow-x: hidden;
@@ -136,7 +136,7 @@ body{
 }
 .hidden3{
   opacity: 0;
-  transition:all 2s;
+  transition:all 1s;
   filter: blur(5px);
  transform: translateX(50px);
 
@@ -349,7 +349,7 @@ html {
 }
 .footer-content{
     max-height: 250px;
-    padding-top: 40px;
+    padding-top: 40px !important;
   }
  .heading{
   font-size: 3rem;
@@ -578,8 +578,11 @@ footer{
   justify-content: center;
   flex-wrap: wrap;
 }
+.footer-b{
+  padding-top: 30px;
+}
 .footer-content{
- 
+ padding-top: 40px !important;
   width: 33%;
   min-width: 300px;
   
