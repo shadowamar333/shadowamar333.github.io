@@ -11,6 +11,7 @@
   
   </head>
   <body>
+
     <div id="whatsappButton">
       <div class="floating-text-button">
           <h2 style="font-size: 20px;" class="bookright">BOOK NOW</h2>
@@ -71,18 +72,24 @@
     </nav>
 <!--Video Entry-->
 
+ 
+
 <div class="clip" >
+ 
    
-  <video class="video-bg"  playsinline  autoplay loop muted style="  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent, transparent, rgba(0, 0, 0, 0.7));">
+  <video class="video-bg" id="into" playsinline autoplay muted loop style="  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent, transparent, rgba(0, 0, 0, 0.7));">
     <source  src="./images/tms2424.mp4" type="video/mp4" >
   </video>
-  <div class="gradient-overlay" style="z-index: -1;"></div>
-
+  <div class="gradient-overlay" style="z-index: -1;">
+  </div>
+  <div id="soound" style="z-index: 3;position: absolute;"> <i class='fa fa-volume-up' style='font-size:56px;color: rgb(255, 255, 255);'></i></div>
   <div class="logo-img " >
-    <h1><span  style="z-index: 24;" id="words"></span></h1>
+    <h1><span  style="z-index: 1;" id="words"></span></h1>
    
   </div>
 </div>
+
+
 <!--Countdown-->
 
 <div class='wrapper'>
