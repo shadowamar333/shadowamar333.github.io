@@ -108,7 +108,7 @@ body{
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.7);
     color: rgba(0, 0, 0, 0.7);
-    min-height: fit-content;
+    min-height: fit-content !important;
 }
 .quote{
  
@@ -313,7 +313,7 @@ html {
   }
   .para{
     font-size: 15px;
-    padding: 1px;
+    padding: 4px !important;
   }
   .cospan{
     font-size: 15px;
@@ -324,10 +324,16 @@ html {
  .collage0{
   height: fit-content;
  }
+ .paraf{
+  font-size: 14px !important;
+  padding: 2px;
+}
   .time h2{
     
     font-size: 35px !important;
     text-align: center;
+  }.time{
+    margin: 7px !important;
   }
   .wrapper{
    display: flex;
@@ -364,7 +370,7 @@ html {
 
 #words{
   color: yellow;
-  font-size: 45px !important;
+  font-size: 40px !important;
   font-weight: bolder;
   transition: all 0.5s ease;
   white-space: nowrap;
