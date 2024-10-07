@@ -90,11 +90,11 @@ const countdownInterval = setInterval(updateCountdown, 10);
 
 //text backup
 const texts = [
-  "India's",
-  "First",
-  "Robotic",
-  "Integrated",
-  "Auto Expo"
+  "INDIA'S",
+  "FIRST",
+  "ROBOTIC",
+  "INTEGRATED",
+  "AUTO EXPO"
 ];
 
 // Reference to the text container element
