@@ -319,7 +319,7 @@ html {
     font-size: 15px;
   }
   .timeline{
-    min-height: fit-content;
+    min-height: fit-content !important;
   }
  .collage0{
   height: fit-content;
@@ -838,7 +838,7 @@ border: 3px solid green;
 .maino {
 	width: 100%;
 	height: auto;
-  min-height: fit-content;
+  min-height: fit-content !important;
 	display: grid;
 	place-items: center;
 	
@@ -854,7 +854,7 @@ border: 3px solid green;
 	margin: auto 0;
 	position: relative;
   padding-top: 50px;
-  min-height: fit-content;
+  min-height: fit-content !important;
 }
 .containerp ul {
 	list-style: none;
