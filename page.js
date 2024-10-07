@@ -1,3 +1,15 @@
+//muted
+const image = document.getElementById('soound');
+const video = document.getElementById('into');
+
+image.addEventListener('click', function() {
+    image.style.display = 'none'; // Hide the image
+    video.style.display = 'block'; // Show the video below the image
+    video.muted = false; // Unmute the video
+    video.play(); // Autoplay the video
+});
+
+
 //click selection
 function setActive(selectedItem) {
   // Remove 'active' class from all items
