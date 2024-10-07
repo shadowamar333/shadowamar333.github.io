@@ -298,6 +298,7 @@ html {
 }
 .heading{
   font-size: 6rem;
+  font-weight:600;
 }
 #tranding .tranding-slider {
   height: 52rem;
@@ -328,6 +329,15 @@ html {
   font-size: 14px !important;
   padding: 2px;
 }
+.mope{
+  font-size: 20px !important;
+  padding-bottom: 5px;
+}
+.navbar-collapse{
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 19px;
+
+}
   .time h2{
     
     font-size: 35px !important;
@@ -343,6 +353,12 @@ html {
   }
   .timer i{
     font-size: 7px;
+  }
+  .colon{
+    padding: 0 5px;
+    color: #ffffff !important;
+    font-size: 30px !important;
+    padding-top: 30px !important;
   }
   .timer h2{
     font-size: 15px;
@@ -381,7 +397,12 @@ html {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
-
+.colon{
+  padding: 0 5px;
+  color: #ffffff !important;
+  font-size: 50px;
+  padding-bottom: 70px;
+}
 .tranding-slide {
   width: 37rem;
   height: 42rem;
@@ -390,9 +411,14 @@ html {
 }
 .bookright{
   opacity: 1;
-
+}
+#saktan{
+  color: rgb(0, 255, 255);
 }
 
+#saktan:hover{
+  color: rgb(26, 161, 161);
+}
 @keyframes fade-right {
   from {
     opacity: 1;
