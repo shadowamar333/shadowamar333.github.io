@@ -6,6 +6,7 @@ image.addEventListener('click', function() {
     image.style.display = 'none'; // Hide the image
     video.style.display = 'block'; // Show the video below the image
     video.muted = false; // Unmute the video
+    video.loop =true;
     video.play(); // Autoplay the video
 });
 
@@ -151,4 +152,5 @@ const observer4 = new IntersectionObserver((entries) => {
 
 const hiddenElements4 = document.querySelectorAll('.hidden3');
 hiddenElements4.forEach((el) => observer4.observe(el));
+
 
