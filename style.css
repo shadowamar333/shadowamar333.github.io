@@ -332,6 +332,12 @@ html {
  .collage0{
   height: fit-content;
  }
+ .kol h1{
+  font-size: 20px !important;
+ }
+ .diop i{
+  font-size: 25px !important;
+ }
  .gotz{
   zoom:0.8;
  }
