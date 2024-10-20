@@ -154,3 +154,28 @@ const hiddenElements4 = document.querySelectorAll('.hidden3');
 hiddenElements4.forEach((el) => observer4.observe(el));
 
 
+//popup
+
+document.addEventListener("DOMContentLoaded", function () {
+  const popUpBoxes = document.querySelectorAll(".pop-up-box"); // Select all pop-up boxes
+
+  // Create an Intersection Observer
+  let observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              // Element is visible, add the "pop-up-visible" class
+              entry.target.classList.add("pop-up-visible");
+              entry.target.classList.remove("pop-up-hidden");
+          } else {
+              // Element is not visible, add the "pop-up-hidden" class
+              entry.target.classList.add("pop-up-hidden");
+              entry.target.classList.remove("pop-up-visible");
+          }
+      });
+  });
+
+  // Observe each pop-up box
+  popUpBoxes.forEach((box) => {
+      observer.observe(box);
+  });
+});
