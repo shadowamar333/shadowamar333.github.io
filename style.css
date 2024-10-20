@@ -332,6 +332,9 @@ html {
  .collage0{
   height: fit-content;
  }
+ .gotz{
+  zoom:0.8;
+ }
  .containerp ul li {
 	width: 300px !important;
 	height: 150px !important;
@@ -342,9 +345,13 @@ html {
 	position: relative;
 	margin-bottom: 30px;
   display: flex;
-  align-items: center;
- 
-	
+  align-items: center;	
+}
+.spos{
+  zoom: .8;
+}
+.parse{
+  zoom: .8;
 }
  .paraf{
   font-size: 14px !important;
@@ -718,35 +725,89 @@ footer{
   font-size: 17px;
   padding: 2px;
 }
+.jo{
+  display: flex;
+  justify-content: center;
+}
 .parat{
   font-size: 35px;
   padding: 2px;
 }
-.smolhe{
-  font-size: 40px;
-}
+
 .spensors{
+
   height: 50%;
   min-height: fit-content;
 }
 .spoinser{
+  padding-top: 80px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+ justify-content: space-evenly;
+}
+.partners{
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
  justify-content: space-evenly;
 }
 .gotz{
+ 
   height:90vh;
   min-height: fit-content;
 }
+.gotzi{
+  padding-top: 30px;
+  min-height: fit-content;
+}
 .partners{
+  padding-top: 80px;
   height: 50%;
   min-height: fit-content;
 }
 .spos{
 height: 300px;
 width: 250px;
-border: 3px solid green;
+background-color: green;
+clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+display: grid;
+justify-items: center;  /* Horizontally center items in the grid cells */
+align-items: center; 
+}
+
+.kol{
+  min-width: 250px;
+  display: grid;
+  justify-items: center;  /* Horizontally center items in the grid cells */
+  align-items: center;  
+}
+.spos h1{
+ font-size: 38px;
+  z-index: 5;
+  color: white;
+  padding-bottom: 30px;
+}
+.spos img{
+  height: 90px;
+  min-width: 180px;
+  width:160px;
+}
+.parse h1{
+  font-size: 45px;
+   z-index: 5;
+   color: white;
+   padding-bottom: 30px;
+ }
+
+.parse{
+  height: 300px;
+width: 250px;
+background-color: green;
+clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
+display: grid;
+justify-items: center;  /* Horizontally center items in the grid cells */
+align-items: center; 
 
 }
 #soound{
@@ -1086,4 +1147,33 @@ ul li p {
     line-height: 18px;
     margin: 6px 0 1px 0;
   }
+}
+.diop{
+  display: flex;
+ gap: 40px;
+}
+.pop-up-box {
+  color: white;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+.diop a{
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.diop a:hover {
+  color: #d9ff00;
+  transform: scale(1.5); /
+}
+/* Animation for pop-in */
+.pop-up-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animation for pop-out */
+.pop-up-hidden {
+  opacity: 0;
+  transform: scale(0);
 }
